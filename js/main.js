@@ -1,11 +1,14 @@
 //The user will enter a date. Use that date to get the NASA picture of the day from that date! https://api.nasa.gov/
+document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
     const choice = document.querySelector('input').value
     console.log(choice)
   
-    const url = `https://api.nasa.gov/planetary/apod?api_key=ZH0CTeMZSuYqX9kfVXgbWXNyIEiBe3jP2p0fMFrr=${choice}`
+    const url = `https://api.nasa.gov/planetary/apod?api_key=ZH0CTeMZSuYqX9kfVXgbWXNyIEiBe3jP2p0fMFrr&date=${choice}`
   
+1:24:03
+
     fetch(url)
         .then(res => res.json()) // parse response as JSON
         .then(data => {
