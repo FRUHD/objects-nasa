@@ -1,21 +1,77 @@
-/******************************************
-/* CSS
-/*******************************************/
-
 /* Box Model Hack */
-*{
+* {
   box-sizing: border-box;
 }
 
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+clear: both;
+}
+
 /******************************************
-/* LAYOUT
+/* BASE STYLES
 /*******************************************/
-img{
+html {
+font-size: 62.5%;
+}
+body {
+  background-color: black;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  text-align: center;
+}
+p {
+  text-align: justify;
+}
+
+/******************************************
+/* LAYOUT : Responsive
+/*******************************************/
+img {
   display: block;
   margin: 0 auto;
 }
+p {
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
 
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+/* micro-phone */
+@media all and (max-width: 290px) {
+}
+img,
+p {
+  max-width: 29rem;
+}
+/* tablet */
+@media all and (min-width: 680px) {
+  img,
+  p {
+    max-width: 68rem;
+  }
+}
+/* monitor */
+@media all and (min-width: 1024px) {
+  img,
+  p {
+    max-width: 102.4rem;
+  }
+}
+/* monitor massive*/
+@media all and (min-width: 1920px) {
+  img,
+  p {
+    max-width: 192rem;
+  }
+}
